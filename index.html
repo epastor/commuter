@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-ugfD-wJofTsqY3KVYQRNmULirfJjb5w"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <script src="app.js"></script>
+  </head>
+
+
+
+  <body>
+    <h4> Driving times </h4>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <input value="" id="txtHome" type="text" class="validate">
+        <label class="active" for="txtHome">Home Address</label>
+      </div>
+      <div class="input-field col s6">
+        <input value="" id="txtWork" type="text" class="validate">
+        <label class="active" for="txtWork">Work Address</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <input type="text" class="timepicker" id="departureTime1a" value="07:30">
+        <label class="active" for="first_name2">I can drive to work between:</label>
+      </div>
+      <div class="input-field col s6">
+        <input type="text" class="timepicker" id="departureTime1b" value="09:00">
+        <label class="active" for="first_name2">And:</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <input type="text" class="timepicker" id="departureTime2a" value="16:30">
+        <label class="active" for="first_name2">I can drive back home between:</label>
+      </div>
+      <div class="input-field col s6">
+        <input type="text" class="timepicker" id="departureTime2b" value="18:30">
+        <label class="active" for="first_name2">And:</label>
+      </div>
+    </div>
+
+    <a id="btnCalculate" class="waves-effect waves-light btn">Calculate</a>
+    <br><br><br>
+
+    <div id="results" class="hide">
+      <h5>Results: </h5>
+      <div class="row">
+        <div class="col s6"><h6>Home to Work</h6></div>
+        <div class="col s6"><h6>Work to Home</h6></div>
+      </div>
+      <div class="row">
+        <ul class="collection col s6" id="morningTimes" class=""></ul>
+        <ul class="collection col s6" id="afternoonTimes" class=""></ul>
+      </div>
+    </div>
+  </body>
+</html>
